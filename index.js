@@ -123,16 +123,50 @@ console.log(calculateElem([3,2,3]))
 /* 9. Create a function to test if an array of lenght 2 contains 1 OR 3. 
     Return `true` is it does, `false` if it doesn't. */
 
+    function arrayCont(array) {
     
+            if (((array[0] === 1) || array[1] === 1) || ((array[0] === 3) || (array[1] === 3))){
+                return "true"
+            } else {
+                return "false"
+            }
+    }
+
+    console.log(arrayCont([5,1]))
 
 
 /* 10. Create a function to test if an array of lenght 2 DOES NOT contain 1 or 3. 
     Return `true` if it doesn't, `false` if it does. */ 
 
+    function arrayCont2(array) {
+    
+        if (((array[0] === 1) || array[1] === 1) || ((array[0] === 3) || (array[1] === 3))){
+            return "false"
+        } else {
+            return "true"
+        }
+}
+
+console.log(arrayCont2([5,1]))
+
 
 /* 11. Create a function to find the longest string from a given array of strings. 
     Pass the array as parameter and return the longest string. */ 
 
+
+    function longestString(array) {
+
+        let x = "a"
+        for (let i = 0; i < array.length; i++) {
+            if (x.length < array[i].length) {
+                x = array[i]
+            } 
+        }
+
+        return x
+    }
+
+    console.log(longestString(["Barcelona", "bar", "Current", "milan", "Miami"]))
 
 /* 12. Create a function to find the types of a given angle:
   1. Acute angle ⇒ between 0 and 90 degrees. Return `acute`.
