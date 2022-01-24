@@ -251,11 +251,38 @@ console.log(greatestElemArr([1, 2, 5, 3, 99, 14, 43, 76, 43, 21]))
 
 
 
-    
+    function first3(string){
+            if (string.length < 3) {
+               return string.toUpperCase();
+            } else {
+               let three = string.substr(0,3)
+               three = three.toLowerCase()
+               let after = string.substr(3)
+               after = after.toUpperCase();
+               return three + after
+            }
+        }
+
+        console.log(first3("dreaming"))
 
 
 /* 17. Create a function to calculate the sum of two integers (passed as parameters). 
     If the sum is in the 50-80 range, return `65`, otherwise, return `80`. */
+
+
+    function sumRange(int1, int2) {
+
+        let x = int1 + int2 
+
+        if ((x >= 50) && (x <= 80)) {
+            return "65"
+        } else {
+            return "80"
+        }
+    }
+
+    console.log(sumRange(55,25))
+
 
 
 /* 18. Create a function to convert a number (passed as a parameter) into a string, basing yourself on this example: 
@@ -267,5 +294,42 @@ console.log(greatestElemArr([1, 2, 5, 3, 99, 14, 43, 76, 43, 21]))
 Ex. 15 has both 3 and 5 has factors: the function will return `DiegoRiccardo` */
 
 
+function convertNumber(int) {
+        let x = ""
+            if (int % 3 === 0) {
+                x += "Diego";
+            }
+        
+            if (int % 5 === 0) {
+                x += "Riccardo"
+            }
+            
+            if (int % 7 === 0) {
+                x += "Stefano"
+            } 
+        
+            if (x.length > 0) {
+                return x
+            } else {
+                return int
+            }
+        }
+        
+        console.log(convertNumber(30))
+
 /* 19. Create a function that that takes a phrase as a parameter and returns its acronym.
 Ex. British Broadcasting Corporation returns `BBC` */
+
+function acronym(phrase) {
+    const chars = phrase.split(" ")
+    let x = " "
+
+    for (let i = 0; i < chars.length; i++) {
+ 
+        x += chars[i][0] 
+    }
+
+    return x
+}
+
+console.log(acronym("My Dream Is To Fly"))
