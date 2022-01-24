@@ -178,18 +178,80 @@ console.log(arrayCont2([5,1]))
 */
 
 
+function findAngle(angle) {
+    if ((angle > 0) && (angle <90)) {
+        return "acute"
+    } else if (angle === 90) {
+        return "right"
+    } else if ((angle > 90) && (angle < 180)) {
+        return "obtuse"
+    } else if (angle === 180) {
+        return "straight"
+    } else {
+        return "None of defined angles"
+    }
+}
+
+
+console.log(findAngle(120))
+
 /* 13. Create a function to find and return the index of the greatest element of a given array of integers that you passed as a parameter. */
 
 
+function greatestElemArr(array) {
+
+    let x = 0
+        for (let i = 0; i < array.length; i++) {
+            if (x < array[i]) {
+                x = i - 1
+            } 
+        }
+
+        return x
+
+}
+
+console.log(greatestElemArr([1, 2, 5, 3, 99, 14]))
+
 /* 14. Create a function to find and return the largest **even** number from an array of integers that is passed a parameter. */
 
+function greatestElemArr(array) {
+
+    let x = 0
+        for (let i = 0; i < array.length; i++) {
+            if ((array[i]%2 === 0) && (array[i] > x)) {
+                x = array[i]
+            } 
+        }
+
+        return x
+
+}
+
+console.log(greatestElemArr([1, 2, 5, 3, 99, 14, 43, 76, 43, 21]))
 
 /* 15. Create a function to check from two given integers (passed as parameters) if one is positive and the other is negative. 
     Return `true` if that's the case, return `false` if it's not. */
 
+    function positiveOrNeg(num1, num2) {
+        if ((num1 >= 0) && (num2 < 0)) {
+            return "true"
+        } else if ((num2 >= 0) && (num1 < 0)) {
+            return "true"
+        } else {
+            return "false"
+        }
+    }
+
+    console.log(positiveOrNeg(2, -1))
+
 
 /* 16. Create a function to create and return a new string where the first 3 characters and in lower case and the others are in upper case. 
     If the string's length is less than 3, convert the whole string into uppercase. Pass the original string as a parameter. */
+
+
+
+    
 
 
 /* 17. Create a function to calculate the sum of two integers (passed as parameters). 
