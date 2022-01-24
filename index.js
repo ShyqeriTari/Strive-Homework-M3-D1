@@ -326,10 +326,10 @@ function acronym(phrase) {
 
     for (let i = 0; i < chars.length; i++) {
  
-        x += chars[i][0] 
+        x += chars[i][0].toUpperCase()
     }
 
     return x
 }
 
-console.log(acronym("My Dream Is To Fly"))
+console.log(acronym("My dream Is To Fly"))
