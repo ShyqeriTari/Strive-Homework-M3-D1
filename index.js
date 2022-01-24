@@ -1,33 +1,129 @@
 /* 1. Create a function to calculate the sum of the two given integers. If the two values are the same, return triple their sum. */
 
 
+function calculateSum(num1,num2) {
+    let x = 0
+    if (num1 === num2) {
+        x = (num1 + num2) * 3 
+    } else {
+         x = num1 + num2
+    }
+
+    return x
+}
+
+console.log(calculateSum(1, 3))
+
 /* 2. Create a function to check two given integers. Return `true` if one of them is 50 or if their sum is 50. */
+
+
+function checkInt(num1, num2) {
+    let x = " "
+    if ((num1 === 50) || (num2=== 50) || (num1 + num2 === 50)) {
+        x = "true"
+    } else {
+        x = "false"
+    }
+
+    return x
+}
+
+console.log(checkInt(26, 25))
 
 
 /* 3. Create a function to remove a character at a specified position from a given string: pass the position and the string as parameters, return the new string. */
 
+function removeChar(position, string) {
+    let x = string.slice(0, position) + string.slice(position +1)
+
+    return x
+}
+
+console.log(removeChar(2, "Miami"))
+
+
 
 /* 4. Create a function to find and return the largest of three given integers. */
+
+function largestInt(int, int1, int2) {
+    if ((int > int1) && (int>int2)) {
+        return "The largest is: " + int
+    } else if ((int1 > int) && (int1 > int2)) {
+        return "The largest is: " + int1
+    } else if ((int2 > int) && (int2 > int1)) {
+        return "The largest is: " + int2
+    } else {
+        return "They are equal: " + int + ", " + int1 + ", "  + int2
+    }
+}
+
+console.log(largestInt(5,2,10))
 
 
 /* 5. Create a function to check if two numbers are in the range 40-60 or 70-100. 
     Return `true` if they do, return `false` if one (or both) don't. */
 
+function checkRange(num1, num2) {
+    if (((num1 >= 40) && (num1 <= 60) || (num1 >= 70) && (num1 <= 100)) && ((num2 >= 40) && (num2 <= 60) || (num2 >= 70) && (num2 <= 100))) {
+        return "true"
+    } else {
+        return "false"
+    }
+}
+
+console.log(checkRange(80, 50))
+
 
 /* 6. Create a function to create a new string composed of a specified number of copies of a given string. 
     Pass the string and the number of copies as parameters. */
 
+    function createComposed(string, copies) {
+        let x = string
+
+        for (let i=1; i < copies; i++) {
+            x += string
+        }
+        return x
+    }
+
+    console.log(createComposed("X, ", 10))
 
 /* 7. Create a function to display the city name if the string begins with "Los" or "New". 
     Pass the city name as a parameter. Return `false` if they start with a different string. */
 
 
+    function displayCity( name) {
+        let x = name.substr(0,3)
+
+        if ((x === "Los") || (x === "New")) {
+            return name
+        } else {
+            return "false"
+        }
+    }
+
+console.log(displayCity("New York"))
+
 /* 8. Create a function to calculate and return the sum of all elements from an array with 3 elements. 
     Pass the array as a parameter. */
+
+function calculateElem(array) {
+
+    x = 0
+
+    for (let i = 0; i < array.length; i++) {
+         x += array[i]
+    }
+    return x
+}
+
+console.log(calculateElem([3,2,3]))
 
 
 /* 9. Create a function to test if an array of lenght 2 contains 1 OR 3. 
     Return `true` is it does, `false` if it doesn't. */
+
+    
 
 
 /* 10. Create a function to test if an array of lenght 2 DOES NOT contain 1 or 3. 
